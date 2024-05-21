@@ -65,8 +65,8 @@ func main() {
 	operator := parts[1]
 	num2, err2 := strconv.Atoi(parts[2])
 
-	if err1 != nil {
-		if err2 != nil {
+	if err1 != nil || err2 != nil {
+		if err1 != nil && err2 != nil {
 			num1 = romanToArabic(parts[0])
 			num2 = romanToArabic(parts[2])
 			isRoman = true
